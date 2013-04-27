@@ -93,16 +93,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libdom.so.*.*.*
+%ghost %{_libdir}/libdom.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/libdom.so
 %{_includedir}/dom
-%{_pkgconfigdir}/*pc
+%{_pkgconfigdir}/libdom.pc
 
 %if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libdom.a
 %endif
