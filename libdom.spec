@@ -10,6 +10,7 @@ License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
 # Source0-md5:	dea386cfe4fc65b79a1815b0515fc688
+Patch0:		lib.patch
 URL:		http://www.netsurf-browser.org/projects/libdom/
 BuildRequires:	libhubbub-devel >= 0.2.0
 BuildRequires:	libparserutils-devel >= 0.1.2
@@ -51,6 +52,7 @@ Statyczna biblioteka libdom.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 export CC="%{__cc}"
@@ -70,12 +72,14 @@ export LDFLAGS="%{rpmldflags}"
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install Q= \
+	lib=%{_lib} \
 	PREFIX=%{_prefix} \
 	COMPONENT_TYPE=lib-shared \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %if %{with static_libs}
 %{__make} install Q= \
+	lib=%{_lib} \
 	PREFIX=%{_prefix} \
 	COMPONENT_TYPE=lib-static \
 	DESTDIR=$RPM_BUILD_ROOT
