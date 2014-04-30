@@ -10,7 +10,6 @@ License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
 # Source0-md5:	055878cf633a935031517e2e209062f6
-#Patch0:		lib.patch
 URL:		http://www.netsurf-browser.org/projects/libdom/
 BuildRequires:	libhubbub-devel >= 0.3.0
 BuildRequires:	libparserutils-devel >= 0.2.0
@@ -52,7 +51,6 @@ Statyczna biblioteka libdom.
 
 %prep
 %setup -q
-#%%patch0 -p1
 
 %build
 export CC="%{__cc}"
