@@ -39,8 +39,8 @@ Summary:	libdom library headers
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libdom
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	expat-devel
-Requires:	libhubbub-devel >= 0.3.0
+Requires:	expat-devel >= 1.95
+Requires:	libhubbub-devel >= 0.3.1
 
 %description devel
 This package contains the include files and other resources you can
