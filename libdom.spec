@@ -5,23 +5,23 @@
 Summary:	Implementation of W3C DOM
 Summary(pl.UTF-8):	Implementacja W3C DOM
 Name:		libdom
-Version:	0.1.2
+Version:	0.3.0
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
-# Source0-md5:	bbe55bf26733e3067170d61427ee6176
+# Source0-md5:	269bd1ceb4debfc1c3e3732a26ded992
 Patch0:		no-Werror.patch
 URL:		http://www.netsurf-browser.org/projects/libdom/
 BuildRequires:	expat-devel >= 1.95
-BuildRequires:	libhubbub-devel >= 0.3.1
-BuildRequires:	libparserutils-devel >= 0.2.1
-BuildRequires:	libwapcaplet-devel >= 0.2.2
+BuildRequires:	libhubbub-devel >= 0.3.3
+BuildRequires:	libparserutils-devel >= 0.2.3
+BuildRequires:	libwapcaplet-devel >= 0.3.0
 BuildRequires:	libxml2-devel >= 2.0
-BuildRequires:	netsurf-buildsystem >= 1.3
+BuildRequires:	netsurf-buildsystem >= 1.5
 BuildRequires:	pkgconfig
-Requires:	libparserutils >= 0.2.1
-Requires:	libwapcaplet >= 0.2.2
+Requires:	libparserutils >= 0.2.3
+Requires:	libwapcaplet >= 0.3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -64,9 +64,9 @@ Statyczna biblioteka libdom.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
+export AR="%{__ar}"
 export CC="%{__cc}"
 export CFLAGS="%{rpmcflags}"
 export LDFLAGS="%{rpmldflags}"
@@ -86,6 +86,11 @@ export LDFLAGS="%{rpmldflags}"
 %endif
 
 %install
+export AR="%{__ar}"
+export CC="%{__cc}"
+export CFLAGS="%{rpmcflags}"
+export LDFLAGS="%{rpmldflags}"
+
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	Q= \
