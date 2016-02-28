@@ -11,7 +11,6 @@ License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
 # Source0-md5:	269bd1ceb4debfc1c3e3732a26ded992
-Patch0:		no-Werror.patch
 URL:		http://www.netsurf-browser.org/projects/libdom/
 BuildRequires:	expat-devel >= 1.95
 BuildRequires:	libhubbub-devel >= 0.3.3
@@ -86,12 +85,13 @@ export LDFLAGS="%{rpmldflags}"
 %endif
 
 %install
+rm -rf $RPM_BUILD_ROOT
+
 export AR="%{__ar}"
 export CC="%{__cc}"
 export CFLAGS="%{rpmcflags}"
 export LDFLAGS="%{rpmldflags}"
 
-rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	Q= \
 	PREFIX=%{_prefix} \
