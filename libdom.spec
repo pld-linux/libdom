@@ -5,12 +5,12 @@
 Summary:	Implementation of W3C DOM
 Summary(pl.UTF-8):	Implementacja W3C DOM
 Name:		libdom
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
-# Source0-md5:	269bd1ceb4debfc1c3e3732a26ded992
+# Source0-md5:	c9dbc908997bb4bd2271b4ee892280aa
 URL:		http://www.netsurf-browser.org/projects/libdom/
 BuildRequires:	expat-devel >= 1.95
 BuildRequires:	libhubbub-devel >= 0.3.3
