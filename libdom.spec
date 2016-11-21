@@ -15,7 +15,7 @@ URL:		http://www.netsurf-browser.org/projects/libdom/
 BuildRequires:	expat-devel >= 1.95
 BuildRequires:	libhubbub-devel >= 0.3.3
 BuildRequires:	libparserutils-devel >= 0.2.3
-BuildRequires:	libwapcaplet-devel >= 0.3.0
+BuildRequires:	libwapcaplet-devel >= 0.4.0
 BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	netsurf-buildsystem >= 1.5
 BuildRequires:	pkgconfig
