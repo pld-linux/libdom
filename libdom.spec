@@ -19,8 +19,9 @@ BuildRequires:	libwapcaplet-devel >= 0.4.0
 BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	netsurf-buildsystem >= 1.5
 BuildRequires:	pkgconfig
+Requires:	libhubbub >= 0.3.3
 Requires:	libparserutils >= 0.2.3
-Requires:	libwapcaplet >= 0.3.0
+Requires:	libwapcaplet >= 0.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
