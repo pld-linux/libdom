@@ -5,23 +5,23 @@
 Summary:	Implementation of W3C DOM
 Summary(pl.UTF-8):	Implementacja W3C DOM
 Name:		libdom
-Version:	0.3.2
+Version:	0.3.3
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
-# Source0-md5:	0b121c2cacaae95c6d753b5ca8ff1e7c
+# Source0-md5:	b97f4a263393d5a4078d472f03ab04d2
 URL:		http://www.netsurf-browser.org/projects/libdom/
 BuildRequires:	expat-devel >= 1.95
-BuildRequires:	libhubbub-devel >= 0.3.4
-BuildRequires:	libparserutils-devel >= 0.2.3
-BuildRequires:	libwapcaplet-devel >= 0.4.0
+BuildRequires:	libhubbub-devel >= 0.3.5
+BuildRequires:	libparserutils-devel >= 0.2.4
+BuildRequires:	libwapcaplet-devel >= 0.4.1
 BuildRequires:	libxml2-devel >= 2.0
-BuildRequires:	netsurf-buildsystem >= 1.6
+BuildRequires:	netsurf-buildsystem >= 1.7
 BuildRequires:	pkgconfig
-Requires:	libhubbub >= 0.3.4
-Requires:	libparserutils >= 0.2.3
-Requires:	libwapcaplet >= 0.4.0
+Requires:	libhubbub >= 0.3.5
+Requires:	libparserutils >= 0.2.4
+Requires:	libwapcaplet >= 0.4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,7 +40,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libdom
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	expat-devel >= 1.95
-Requires:	libhubbub-devel >= 0.3.1
+Requires:	libhubbub-devel >= 0.3.5
 
 %description devel
 This package contains the include files and other resources you can
