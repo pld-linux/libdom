@@ -11,6 +11,7 @@ License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
 # Source0-md5:	715c8018dbf0ed8b61a1afcc8cb13ed9
+Patch0:		gcc14.patch
 URL:		http://www.netsurf-browser.org/projects/libdom/
 BuildRequires:	expat-devel >= 1.95
 BuildRequires:	libhubbub-devel >= 0.3.8
@@ -65,6 +66,7 @@ Statyczna biblioteka libdom.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 export AR="%{__ar}"
